@@ -23,7 +23,7 @@ jobs:
           path: ~/project/
       - node/install:
           node-version: '20.9'
-      - run: node --version 
+      - run: node --version
       - run: npm i -g @railway/cli
       - run:
           name: Deploy to Railway App
@@ -41,7 +41,7 @@ tags_only: &tags_only
       only: /^.*/
 
 workflows:
-  version: 1
+  version: 2.1
   deploy_pipeline:
     jobs:
       - deploy_app_to_railway:
